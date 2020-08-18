@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<form action="/profile" method="post" enctype="multipart/form-data">
+    <!-- <select name="sel1" multiple> -->
+    ユーザ名：<input type="text" name="username"><br>
+    具材：<input type="text" name="gu"><br>
+    <!-- <option>タコ</option>
+        <option>イカ</option>
+        <option>ナマコ</option> -->
+    トッピング：<input type="name" name="topping"><br>
+    ソース：<input type="name" name="source"><br>
+    <!-- レシピ名：<input type="name" name="name"><br> -->
+    プロフィール画像：<input type="file" name="img_file"><br>
+    <!-- </select> -->
+    <input type="submit" name="save" value="作成だぜえ">
+</form>
+
+
+
+<body>
+    <article>
+        <header class="page-header">
+            <h1><a href="/templates/takoyaki.html"><img class="logo" src="/static/img/takoyakilogo.jpg"></a></h1>
+        </header>
+        <section id="sec4">
+            <div class="box port">
+
+
+
+
+                <a href="/login">登録されている方はこちら</a>
+
+
+
+                <!-- <h1>ユーザ名</h1>
+                <p>ここでもdisplay:flexの練習をしましょうdisplay:flexは様々な並び替えをすることができます。<br>
+                    グリッドレイアウトと言われるCSSも最近流行っています。ここではflexを使用します。
+                </p>
+                <button id="size-up">画像拡大</button>
+                <button id="img-change">画像変更</button>
+                <button type=“button” onclick="location.href='/templates/meishi.html">名刺作成</button> -->
+                <!-- FadeThis用のクラスを追加 -->
+                <!-- <div class="portfolio slide-bottom" data-plugin-options='{"speed":1000 , "reverse": false}'>
+                    <a href="#"><img src="/static/img/takoyaki_top.jpeg" alt="オリジナル">
+                        <p class="port_title">レシピ名</p>
+                    </a>
+                    <p class="port_margin">ここにオリジナルのレシピになります
+                    </p>
+                </div> -->
+            </div>
+        </section>
+    </article>
+</body>
+
+{% endblock %}
